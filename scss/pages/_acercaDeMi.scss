@@ -1,0 +1,189 @@
+.acercaDeMi {
+  height: 750px;
+  width: 100vw;
+  scroll-snap-align: start;
+  display: grid;
+  grid-template-columns: auto;
+  place-content: center;
+
+// al contenedor para efectos se le agrega la animacion "AparecerPorIzquierda" y al siguiente contenedor la animacion "shadowClass", se los separa en distintos contenedores para que no se interpongan entre si
+  &__contenedorParaEfectos {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+
+  &__contenedor {
+    height: auto;
+    width: 90vw;
+    border: 1px solid $darkViolet;
+    border-radius: 1em;
+    background-color: $darkViolet;
+    box-shadow: $shadow;
+    display: grid;
+    justify-self: center;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: auto;
+
+    &__scroll, &__texto, &__estudios {
+      display: none;
+    }
+
+    &__scroll {
+      grid-row: 1/-1;
+      background-color: $skyblue;
+      -webkit-animation: scroll-up 0.3s forwards;
+              animation: scroll-up 0.3s forwards;
+    }
+
+    &__scrollDown {
+      -webkit-animation: scroll-down 0.3s forwards;
+              animation: scroll-down 0.3s forwards;
+    }
+
+    &__texto {
+      grid-row: 1;
+      grid-column: 2;
+      align-items: center;
+      background-color: $lightViolet;
+      border-top-left-radius: 10px;
+      border-bottom: 5px solid $darkViolet;
+      -webkit-animation: normal-font 0.5s forwards;
+              animation: normal-font 0.5s forwards;
+      cursor: pointer;
+
+      &__contenido {
+        grid-column: 3;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        align-self: start;
+        margin: 1em;
+        -webkit-user-select: none;
+           -moz-user-select: none;
+            -ms-user-select: none;
+                user-select: none;
+      }
+    }
+
+    &__estudios {
+      grid-row: 2;
+      grid-column: 2;
+      align-items: center;
+      background-color: $lightViolet;
+      border-bottom-left-radius: 10px;
+      -webkit-animation: normal-font 0.5s forwards;
+              animation: normal-font 0.5s forwards;
+      cursor: pointer;
+
+      &__contenido {
+        display: grid;
+        grid-column: 3;
+        grid-template-rows: 20px 1fr auto;
+        grid-template-columns: 1fr 1fr;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        line-height: 2em;
+        margin: 1em;
+        text-align: start;
+        place-items: center;
+        -webkit-user-select: none;
+           -moz-user-select: none;
+            -ms-user-select: none;
+                user-select: none;
+
+        &__lenguajesTitulo {
+          grid-column: 1/-1;
+        }
+
+        &__certificados, &__CV {
+          border: 1px solid $white;
+          border-radius: 10px;
+          padding: 1em;
+          font-size: 0.9em;
+          color: white;
+        }
+
+        &__certificados:hover, &__CV:hover {
+          -webkit-animation: colorfull 0.2s forwards;
+                  animation: colorfull 0.2s forwards;
+        }
+      }
+    }
+
+    &__texto:hover, &__estudios:hover {
+      -webkit-animation: big-font 0.5s forwards;
+              animation: big-font 0.5s forwards;
+    }
+  }
+
+  &__contenedorWebDevParaEfectos {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+
+  &__contenedorWebDev {
+    height: 70.5vh;
+    width: 30vw;
+    background-color: $lightViolet;
+    box-shadow: $shadow;
+    display: none;
+
+    img{
+      grid-column: 3;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: 800px){
+  .acercaDeMi {
+    height: 100vh;
+    width: 100vw;
+    grid-template-rows: 70%;
+    grid-template-columns: 50% auto;
+
+    &__contenedor {
+      height: 70vh;
+      width: 100%;
+      font-size: 0.8em;
+      margin: 0;
+      border-radius: 0;
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-columns:  5px 20% auto;
+
+      &__scroll, &__texto, &__estudios {
+        display: grid;
+      }
+
+      &__texto__contenido {
+        text-align: start;
+        align-self: center;
+        grid-row: 1/-1;
+        margin: 20px;
+      }
+
+      &__estudios__contenido {       
+          display: none;
+          grid-row: 1/-1;
+          width: 100%;
+          margin: 20px;     
+      }
+    } 
+  }
+
+  .acercaDeMi__contenedorWebDev  {
+    display: block;
+    grid-column: 2;
+    width: 40vw;
+  }
+
+  .acercaDeMi__contenedorWebDevParaEfectos {
+    display: block;
+  }
+}
+
+@media (min-width: 1024px) {
+  .acercaDeMi__contenedor {
+    font-size: 1em;
+  }
+}

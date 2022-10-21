@@ -1,0 +1,196 @@
+header * {
+  position: relative;
+  color: $white;
+  transition: $transitionDelay;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.header {
+  height: 4em;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  font-size: $normal-font;
+  background-color: $lightViolet;
+  z-index: 100;
+  display: grid;
+  place-content: center;
+  -moz-column-gap: 1em;
+       column-gap: 1em;
+       grid-template-columns: repeat(3, auto);
+
+  &__navBar {
+    display: grid; 
+    place-content: center;
+    cursor: pointer;
+    padding: 5px 10px;
+
+
+    &__line {
+      padding: 2px 15px;
+      background: $white;
+      margin: 0px 3px 2px -3px;
+      border-radius: 1.5em;
+    }
+
+    &__line:nth-of-type(2) {
+      padding: 2px 15px;
+      background: $white;
+      margin: 2px -3px 0px 3px;
+      border-radius: 1.5em;
+    }
+  }
+  
+  &__light {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-content: center;
+    place-items: center;
+    width: 3em;
+    border-radius: 2em;
+    border: 3px solid $skyblue;
+    background-color: $black;
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    &__circle {
+      place-self: center end;
+      position: fixed;
+      height: 1.5em;
+      width: 1.5em;
+      background-color: $white;
+      border-radius: 2em;
+      z-index: 100;
+      -webkit-animation: lightCircle 0.5s forwards;
+              animation: lightCircle 0.5s forwards;
+    }
+
+    &__circleDark {
+      -webkit-animation: darkCircle 0.5s forwards;
+              animation: darkCircle 0.5s forwards;
+    }
+
+    &__moon {
+      height: 1em;
+      grid-column: 1;
+      background-position: center center;
+      background-size: cover;
+    }
+
+    &__sun {
+      height: 1em;
+      grid-column: 2;
+      background-position: center center;
+      background-size: cover;
+    }
+  }
+
+  &__proyectos, &__acercaDeMi, &__contacto {
+    display: none;
+  }
+}
+
+.header a:hover, .header button:hover  {
+  transform: $bigSize;
+}
+
+html:not([data-scroll="0"]) {
+  header * {
+    color: $white;
+  }
+  .navScrolled {
+    color: $white;
+    border-bottom: 0;
+  }
+}
+
+
+
+@media (min-width: 450px) {
+  .header {
+    grid-template-columns: repeat(5, auto);
+    background-color: $lightViolet;
+
+    &__navBar {
+      display: none;
+      place-content: center;
+      cursor: pointer;
+      padding: 5px 10px;
+    }
+
+    
+    &__proyectos, &__acercaDeMi, &__contacto {
+      display: block;
+    }
+  }
+
+  html:not([data-scroll="0"]) {    
+    header * {
+      color: $white;
+    }
+
+    .navScrolled {
+      color: $skyblue;
+      border-bottom: 4px solid $skyblue;
+    }
+  }
+}
+
+
+@media (min-width: 700px) {
+  .header {
+    height: 4em;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    font-size: $normal-font;
+    z-index: 100;
+    display: grid;
+    place-content: center;
+    -moz-column-gap: 1em;
+         column-gap: 1em;
+    grid-template-columns: repeat(5, auto);
+    background-color: transparent;
+
+    &__navBar {
+      display: none;
+      place-content: center;
+      cursor: pointer;
+      padding: 5px 10px;
+    }
+
+        &__proyectos, &__acercaDeMi, &__contacto {
+      display: block;
+    }
+  }
+
+  html:not([data-scroll="0"]) { 
+    header * {
+      color: $lightViolet;
+    }
+
+    .header {
+      grid-template-columns: repeat(5, auto);
+
+      &__navBar {
+        display: none;
+      }
+
+      &__proyectos, &__acercaDeMi, &__contacto {
+        display: block;
+      }
+    }
+  
+
+    .navScrolled {
+      color: $skyblue;
+      border-bottom: 4px solid $skyblue;
+    }
+  }
+}

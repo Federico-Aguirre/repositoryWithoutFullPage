@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Poppins:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./main.css">
+    <title>Federico Nicolás Aguirre Portfolio</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <a href="#hero" class="header__inicio hideMenuClose">Inicio</a>
+        <a href="#proyectos" class="header__proyectos">Proyectos</a>
+        <a href="#acercaDeMi" class="header__acercaDeMi">Acerca de mi</a>
+        <a href="#contacto" class="header__contacto">Contacto</a>
+        <button class="header__navBar">
+            <div class="header__navBar__line"></div>
+            <div class="header__navBar__line"></div>
+        </button>
+        <button class="header__light">
+            <div class="header__light__circle"></div>
+            <img class="header__light__moon" src="images/svg/moon.svg" alt="">
+            <img class="header__light__sun" src="images/svg/sun.svg" alt="">
+        </button>
+    </header>
+
+    <div class="navBarMenu">
+        <a href="#hero" class="navBarMenu__inicio hideMenuClose">Inicio</a>
+        <a href="#proyectos" class="navBarMenu__proyectos hideMenuClose">Proyectos</a>
+        <a href="#acercaDeMi" class="navBarMenu__acercaDeMi hideMenuClose">Acerca de mi</a>
+        <a href="#contacto" class="navBarMenu__contacto hideMenuClose">Contacto</a>
+    </div>
+
+    <div class="verProyectos">
+        <a href="#proyectos" class="verProyectos__linkProyectos">Ver proyectos</a>
+    </div>
+
+    <a href="#hero" class="linkHero">
+        <img class="linkImg" src="./images/flecha.png" alt="">
+    </a>
+
+    <section class="section hero" id="hero">
+
+        <div class="hero__color"></div>
+
+        <div class="hero__container">
+            <svg class="hero__container__logo" viewbox="0 0 150 60">
+                <text x="10" y="0">
+                    <tspan x="10" y="20">
+                        <tspan class="hero__container__logo__firstLetters">F</tspan>ederico Aguirre
+                    </tspan>
+                    <tspan x="10" y="30">
+                        <tspan class="hero__container__logo__firstLetters">D</tspan>esarrollador
+                    </tspan>
+                    <tspan x="10" y="40">
+                        <tspan class="hero__container__logo__firstLetters">F</tspan>rontEnd
+                    </tspan>
+                </text>
+            </svg>
+        </div>
+
+    </section>
+
+    <section class="section proyectos" id="proyectos">
+
+        <div class="proyectos__contenedor">
+            <a href="https://github.com/Federico-Aguirre/react-socket.io" target="_blank"
+                class="proyectos__contenedor__card1 proyectos__contenedor__card">
+                <div class="hiddenText">
+                    Creado con React.js, Socket.io,
+                    Express, Cors.
+                </div>
+                <div class="proyectos__contenedor__text">Chat App
+                </div>
+                <img src="images/imagen_Git_Hub.jpg" alt="Proyect image">
+            </a>
+
+            <a href="https://github.com/Federico-Aguirre/react-crud" target="_blank"
+                class="proyectos__contenedor__card2 proyectos__contenedor__card">
+                <div class="hiddenText">Creado con React.js, MySQL, Express,
+                    Cors.
+                </div>
+                <div class="proyectos__contenedor__text">React CRUD
+                </div>
+                <img src="images/imagen_Git_Hub.jpg" alt="Proyect image">
+            </a>
+
+            <a href="https://github.com/Federico-Aguirre/spa-react" target="_blank"
+                class="proyectos__contenedor__card3 proyectos__contenedor__card">
+                <div class="hiddenText">Creado con React.js, react-router-dom
+                </div>
+                <div class="proyectos__contenedor__text">Spa-React
+                </div>
+                <img src="images/imagen_Git_Hub.jpg" alt="Proyect image">
+            </a>
+
+            <a href="https://github.com/Federico-Aguirre/php-sql-crud" target="_blank"
+                class="proyectos__contenedor__card4 proyectos__contenedor__card">
+                <div class="hiddenText">Creado con php, MySQL
+                </div>
+                <div class="proyectos__contenedor__text">Simple CRUD
+                </div>
+                <img src="images/imagen_Git_Hub.jpg" alt="Proyect image">
+            </a>
+        </div>
+
+    </section>
+
+    <section class="acercaDeMi section" id="acercaDeMi">
+
+        <div class="acercaDeMi__contenedorParaEfectos">
+            <div class="acercaDeMi__contenedor">
+                <div class="acercaDeMi__contenedor__scroll"></div>
+                <button class="acercaDeMi__contenedor__texto">Acerca <br> de mi</button>
+                <div class="acercaDeMi__contenedor__texto__contenido">
+                    Disfruto dar vida a las ideas en el
+                    navegador, aprendiendo y superando nuevos desafíos. Mi
+                    especialidad es el desarrollo front-end con foco en producir
+                    páginas web y aplicaciones que sean rápidas, de fácil uso,
+                    con un óptimo diseño ux/ui y accesible en un amplio rango de
+                    dispositivos y navegadores.
+                </div>
+                <button class="acercaDeMi__contenedor__estudios">Estudios</button>
+                <div class="acercaDeMi__contenedor__estudios__contenido">
+                    <div class="acercaDeMi__contenedor__estudios__contenido__lenguajesTitulo">
+                        Conocimientos técnicos
+                    </div>
+
+                    <ul class="acercaDeMi__contenedor__estudios__contenido__lenguajes1">
+                        <li>HTML</li>
+                        <li>Diseño UX/UI</li>
+                        <li>Git+github</li>
+                        <li>CSS</li>
+                        <li>SASS</li>
+                        <li>Bootstrap</li>
+                        <li>JavaScript</li>
+                        <li>EcmaScript</li>
+                    </ul>
+                    <ul class="acercaDeMi__contenedor__estudios__contenido__lenguajes2">
+                        <li>JQuery</li>
+                        <li>NodeJS</li>
+                        <li>Express</li>
+                        <li>ReactJS</li>
+                        <li>Redux</li>
+                        <li>PHP</li>
+                        <li>SQL</li>
+                        <li>MySQL</li>
+                    </ul>
+
+                    <a href="https://drive.google.com/drive/folders/10ba68nUmdU_Oy7nGn8oUexGqy85KSSnU?usp=sharing"
+                        class="acercaDeMi__contenedor__estudios__contenido__certificados" target="_blank">
+                        Certificados
+                    </a>
+
+                    <a href="https://drive.google.com/file/d/16m_neHznAoeBWQ_LzQcVvdH3-eD-kur0/view?usp=sharing"
+                        class="acercaDeMi__contenedor__estudios__contenido__CV" target="_blank">
+                        CV
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="acercaDeMi__contenedorWebDevParaEfectos">
+            <div class="acercaDeMi__contenedorWebDev">
+                <img class="" src="images/svg/webDeveloper.svg" data-delay="1s" alt=""></img>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="contacto section" id="contacto">
+
+        <div class="contacto__formContenedorParaEfectos">
+            <div class="contacto__formContenedor">
+                <form class="contacto__formContenedor__form" action="https://formspree.io/mjvapnag" method="POST">
+                    <div class="contacto__formContenedor__form__titulo">Envia tu mensaje</div>
+                    <input class="contacto__formContenedor__form__nombre" id="nombre" type="text" name="nombre"
+                        autocomplete="off" placeholder="  " required />
+                    <label class="contacto__formContenedor__form__labelNombre" for="nombre">Nombre</label>
+
+                    <input class="contacto__formContenedor__form__email" id="email" type="email" name="email"
+                        autocomplete="off" placeholder="  " required />
+                    <label class="contacto__formContenedor__form__labelEmail" for="email">Email</label>
+
+                    <input class="contacto__formContenedor__form__asunto" id="asunto" type="text" name="asunto"
+                        autocomplete="off" placeholder="  " required />
+                    <label class="contacto__formContenedor__form__labelAsunto" for="asunto">Asunto</label>
+
+                    <textarea class="contacto__formContenedor__form__textarea1" id="textarea1" name="consulta"
+                        placeholder=" "></textarea>
+                    <label class="contacto__formContenedor__form__labelTextarea1" for="textarea1">Consulta</label>
+
+                    <input type="submit" value="Enviar" class="contacto__formContenedor__form__enviar" />
+
+                </form>
+            </div>
+        </div>
+
+        <div class="contacto__links">
+            <div class="contacto__links__linkedin">
+                <a href="https://www.linkedin.com/in/federico-nicolas-aguirre/" target="_blank">
+                    <img src="./images/svg/linkedin.svg" alt="" />
+                </a>
+            </div>
+            <div class="contacto__links__github">
+                <a href="https://github.com/Federico-Aguirre" target="_blank">
+                    <img src="./images/svg/github.svg" alt="" />
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="./app.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+$white: hsl(0, 0%, 100%);
+$black: hsl(0, 0%, 0%);
+$darkViolet: hsl(258, 86%, 52%);
+$lightViolet: hsl(276, 91%, 38%);
+$skyblue: hsl(194, 85%, 62%);
+$darkblue: hsl(243, 57%, 50%);
+$red: hsl(333, 93%, 40%);
+$bubbleColor: hsl(254, 50%, 51%);
+
+$normal-font: 1em;
+$big-font: 1.3em;
+$bigger-font: 3em;
+
+$shadow: 6px 6px 20px 3px $darkViolet;
+$shadowLight: 0 0 2em 0.5em $darkViolet;
+
+$bigSize: scale(1.2);
+$transitionDelay: all 0.25s ease-in;

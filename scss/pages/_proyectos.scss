@@ -1,0 +1,105 @@
+.proyectos {
+  scroll-snap-align: start;
+  display: grid;
+  height: 1400px;
+  width: 100vw;
+  place-content: center;
+  background-color: $white;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  z-index: 1;
+
+  &__contenedor {
+    display: grid;
+    align-content: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    height: 300px;
+    transform: translateX(-200px);
+    opacity: 0;
+    row-gap: 50px;
+    -moz-column-gap: 50px;
+         column-gap: 50px;
+
+
+    a {
+      color: $white;
+    }
+
+    &__card {
+      height: 203;
+      width: 70%;
+      border-radius: 10px;
+      border: 5px solid $darkViolet;
+      background-color: $lightViolet;
+      box-shadow: $shadow;
+      display: grid;
+      place-self: center;
+      grid-template-rows: 25px 1fr;
+      cursor: pointer;
+      transition: $transitionDelay;
+
+      div {
+        background-color: $darkViolet;
+        transition: $transitionDelay;
+        line-height: 1.2em;
+        grid-row: 1;
+        grid-column: 1/-1;
+      }
+
+      .hiddenText{
+        grid-row: 1 / -1;
+        opacity: 0;
+        border-radius: 0;
+      }
+
+      img {
+        grid-row: 2;
+        grid-column: 1/-1;
+        height: 178px;
+        width: 100%;
+      }
+    }
+
+    &__card .hiddenText{
+      line-height: 1.5em;
+      -webkit-animation: cardMessageHidden 1s ease-out;
+              animation: cardMessageHidden 1s ease-out;
+      z-index: 999;
+      display: grid;
+      place-items: center;
+    }
+
+    &__card:hover .hiddenText{
+      line-height: 1.5em;
+      -webkit-animation: cardMessage 1s forwards;
+              animation: cardMessage 1s forwards;
+      z-index: 999;
+      display: grid;
+      place-items: center;
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  .proyectos {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 4em 1fr;
+
+    &__contenedor {
+      grid-row: 2;
+      place-self: center;
+      row-gap: 0;
+      column-gap: 0;
+      height: 100%;
+      width: 80%;
+      row-gap: 1em;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      margin: 0;
+    }
+  }
+}
